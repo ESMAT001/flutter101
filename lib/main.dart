@@ -13,26 +13,26 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "Hello World",
-          style: TextStyle(
-            fontFamily: 'Neon',
-            letterSpacing: 4.0,
-            color: Colors.red,
-            fontSize: 25.0,
-            fontWeight: FontWeight.bold,
-            shadows: [
-              Shadow(
-                color: Colors.black,
-                blurRadius: 18.0,
-                offset: Offset(5.0, 5.0),
-              ),
-            ],
+          title: const Text(
+            "Hello World !",
+            style: TextStyle(
+              fontFamily: 'Neon',
+              letterSpacing: 3.0,
+              color: Colors.red,
+              fontSize: 25.0,
+              fontWeight: FontWeight.bold,
+              shadows: [
+                Shadow(
+                  color: Colors.black,
+                  blurRadius: 18.0,
+                  offset: Offset(5.0, 5.0),
+                ),
+              ],
+            ),
           ),
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.white,
-      ),
+          centerTitle: true,
+          backgroundColor: Colors.white,
+          toolbarHeight: 70.0),
     );
   }
 }
