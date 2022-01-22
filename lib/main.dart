@@ -33,6 +33,21 @@ class Home extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.white,
           toolbarHeight: 70.0),
+      body: Center(
+        child: IconButton(
+          onPressed: () => print("Hello World !"),
+          icon: const Icon(
+            Icons.ac_unit,
+            size: 60.0,
+            color: Colors.red,
+          ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => {},
+        child: const Icon(Icons.add),
+        backgroundColor: Colors.red,
+      ),
     );
   }
 }
