@@ -33,6 +33,8 @@ class _DiceAppState extends State<DiceApp> {
   @override
   Widget build(BuildContext context) {
     return Center(
+        child: Padding(
+      padding: const EdgeInsets.all(80.0),
       child: Row(children: <Widget>[
         Expanded(
             child: TextButton(
@@ -53,6 +55,6 @@ class _DiceAppState extends State<DiceApp> {
           child: Image.asset('images/dice$rightDiceNumber.png'),
         )),
       ]),
-    );
+    ));
   }
 }
