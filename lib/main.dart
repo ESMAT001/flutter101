@@ -22,26 +22,29 @@ class MyApp extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    Container(
-                      width: 100.0,
-                      child: Image.network(
-                          'https://img-c.udemycdn.com/user/200_H/173002169_0cf4_2.jpg'),
-                    ),
-                    Container(
-                      width: 100.0,
-                      child: Image.network(
-                          'https://img-c.udemycdn.com/user/200_H/173002169_0cf4_2.jpg'),
-                    ),
-                    Container(
-                      width: 100.0,
-                      child: Image.network(
-                          'https://img-c.udemycdn.com/user/200_H/173002169_0cf4_2.jpg'),
-                    ),
-                  ],
+                Card(
+                  color: Colors.blue.shade600,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Container(
+                        width: 100.0,
+                        child: Image.network(
+                            'https://img-c.udemycdn.com/user/200_H/173002169_0cf4_2.jpg'),
+                      ),
+                      Container(
+                        width: 100.0,
+                        child: Image.network(
+                            'https://img-c.udemycdn.com/user/200_H/173002169_0cf4_2.jpg'),
+                      ),
+                      Container(
+                        width: 100.0,
+                        child: Image.network(
+                            'https://img-c.udemycdn.com/user/200_H/173002169_0cf4_2.jpg'),
+                      ),
+                    ],
+                  ),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
