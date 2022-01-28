@@ -16,7 +16,7 @@ void main() => runApp(MaterialApp(
             ),
           ),
         ),
-        body: DiceApp(),
+        body: const DiceApp(),
       ),
     ));
 
@@ -28,8 +28,15 @@ class DiceApp extends StatefulWidget {
 }
 
 class _DiceAppState extends State<DiceApp> {
-  int rightDiceNumber = Random().nextInt(6) + 1;
-  int leftDiceNumber = Random().nextInt(6) + 1;
+  int rightDiceNumber = 1;
+  int leftDiceNumber = 1;
+  void randomNumber() {
+    setState(() {
+      rightDiceNumber = Random().nextInt(6) + 1;
+      leftDiceNumber = Random().nextInt(6) + 1;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -39,18 +46,14 @@ class _DiceAppState extends State<DiceApp> {
         Expanded(
             child: TextButton(
           onPressed: () {
-            setState(() {
-              leftDiceNumber = Random().nextInt(6) + 1;
-            });
+            this.randomNumber();
           },
           child: Image.asset('images/dice$leftDiceNumber.png'),
         )),
         Expanded(
             child: TextButton(
           onPressed: () {
-            setState(() {
-              rightDiceNumber = Random().nextInt(6) + 1;
-            });
+            this.randomNumber();
           },
           child: Image.asset('images/dice$rightDiceNumber.png'),
         )),
